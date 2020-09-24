@@ -24,14 +24,6 @@ class Demo extends Component {
     return (
       <div>
         <h1>React Canvas Draw</h1>
-        <iframe
-          title="GitHub link"
-          src="https://ghbtns.com/github-btn.html?user=embiem&repo=react-canvas-draw&type=star&count=true"
-          frameBorder="0"
-          scrolling="0"
-          width="160px"
-          height="30px"
-        />
         <h2>default</h2>
         <p>
           This is a simple <span>{`<CanvasDraw />`}</span> component with
@@ -84,9 +76,11 @@ class Demo extends Component {
         <div className={classNames.tools}>
           <button
             onClick={() => {
+              const saveData = this.saveableCanvas.getSaveData();
+              console.log('saveData', saveData);
               localStorage.setItem(
                 "savedDrawing",
-                this.saveableCanvas.getSaveData()
+                saveData,
               );
             }}
           >
