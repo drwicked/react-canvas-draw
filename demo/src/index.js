@@ -21,6 +21,7 @@ class Demo extends Component {
     }, 2000);
   }
   render() {
+    console.log('render');
     return (
       <div>
         <h1>React Canvas Draw</h1>
